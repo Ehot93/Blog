@@ -13,8 +13,7 @@ $out = "
 	
 
 	</body>
-	</html>
-";
+	</html>";
 	$conn = mysqli_connect('localhost', 'root', '', 'Blog');
 	$result = mysqli_query($conn, 'SELECT * from Notes limit 0 , 3');
 	//$result = mysqli_query($conn, 'SELECT * from Notes limit' .$note_num. ', 3');
@@ -34,16 +33,8 @@ $out = "
 if ($_POST['btn1'] == 'btn1') {
 	echo "next";
 }
-
 if ($_POST['btn2'] == 'btn2') {
 	echo "prev";
 }
-
-// $start = $_POST['count'];
-//$query ="SELECT `date_modify` FROM `Notes` DESC LIMIT ".$start.", 3;";
-//**************************************************
-
 echo $out;
-//mysql_free_result($result);
-// mysql_close($conn);
 ?>
